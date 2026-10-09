@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        .inter-regular {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .inter-bold {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .space-grotesk {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        body{
+            background-color: black;
+            font-size: 16px;
+        }
+        .containerHeader{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,.7);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            height: 80px;
+            z-index: 100;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+        }
+        .containerHeader img{
+            height: 100%;
+        }
+        main{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            min-height: 100vh;
+        }
+        main::after{
+            content: "";
+            position: absolute;
+            height: 90vh;
+            aspect-ratio: 1/1;
+            right: 0;
+            margin-right: -30%;
+            background-image: url(imgs/PlanetB.webp);
+            background-size: auto 85%;
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            overflow: visible;
+            transform-origin: center;
+            animation: rotation 25s linear infinite;
+        }
+        @keyframes rotation{
+            0%{
+                transform:rotate(0deg)
+            }
+            100%{
+                transform:rotate(360deg)
+            }
+        }
+        .containerMain{
+            padding-top: 80px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .containerMain p, .containerMain h1, footer p{
+            color: white;
+        }
+        .containerMain p{
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .contract{
+            padding: .5rem 1rem;
+            border: 1px solid #C86429;
+            display: inline-block;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .contract h2{
+            color: #C86429;
+            text-transform: uppercase;
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p{
+            text-align: center;
+            color: #C86429;
+        }
+        .disclaimer{
+            font-size: .8rem;
+            color: white;
+        }
+        p, h1, h2{
+            text-shadow: 0 0 5px black;
+        }
+        @media (min-width:1024px){
+            .containerMain, footer .copy{
+                max-width: 50vw;
+            }
+            main::after{
+                margin-right: -10%;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <img src="imgs/PlanetB_logo.webp" alt="Logo Planet B">
+        </div>
+    </header>
+    <main>
+        <div class="containerMain">
+            <h1 class="space-grotesk">
+                A new world. The original vision.
+            </h1>
+            <div class="textMain">
+                <p class="inter-regular">
+
+                    Planet B begins with an idea: a decentralized future should belong to the people who participate in it.
+                </p>
+                <p class="inter-regular">
+                    Inspired by Satoshi Nakamoto’s vision of peer-to-peer exchange without a central authority, Planet B embraces openness, individual sovereignty and freedom to participate.
+                </p>
+                <p class="inter-regular">
+                    Our ambition is to create a shared identity around these principles. A planet without borders, where a common idea brings people together and every participant chooses their own path.
+                </p>
+                <p class="inter-regular">
+                    Planet B has no official social media accounts. This website is the project’s public home: a place to present its vision without relying on algorithms, influencers or constant noise.
+                </p>
+                <p class="inter-regular">
+                    We make no promises of returns. Our focus is a lasting identity, a clear purpose and a community that can grow independently.
+                </p>
+                <p class="inter-bold">
+                    One planet. A shared vision. No central voice.
+                </p>
+            </div>
+            <div class="contract">
+                <h2 class="space-grotesk">Contract address</h2>
+                <p class="inter-regular">Available at token launch.</p>
+            </div>
+            <div class="social">
+               <p class="inter-regular">PLANETB has no official social media accounts. This site presents only the project's identity and vision.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="inter-regular copy">2026 PlanetB. Logo and visual identity are freely reproducible.</p>
+        <p class="inter-regular disclaimer">$PLANETB is a meme coin for entertainment purposes only. Crypto trading is highly risky and volatile. Invest at your own risk and only what you can afford to lose. No financial advice.</p>
+    </footer>
+</body>
+</html>
